@@ -1,24 +1,83 @@
-# README
+# re_cares_2020_api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repository implements the backend of the RECares 2020 project.
 
-Things you may want to cover:
+## User authentication
 
-* Ruby version
+Users receive an authentication token upon signing in or registering for an
+account. They can then use this token to identify themselves by adding the
+following headers to their requests:
 
-* System dependencies
+```
+X-User-Email alice@example.com
+X-User-Token Gp7NKBd8-wgXqazx-cuk
+```
 
-* Configuration
+An alternative method is passing them in as query parameters.
 
-* Database creation
+```
+https://secure.example.com?user_email=alice@example.com&user_token=1G8_s7P-V-4MGojaKD7a
+```
 
-* Database initialization
+You can even mix and match these methods (if you really wanted to).
 
-* How to run the test suite
+## API Endpoints
 
-* Services (job queues, cache servers, search engines, etc.)
+### User registration
 
-* Deployment instructions
+#### Path
 
-* ...
+`POST /users`
+
+#### Send
+
+
+```json
+{
+    "user": {
+        "email": "alice@example.com",
+        "password": "foobar"
+    }
+}
+```
+
+#### Receive
+
+```json
+{
+    "id": 1,
+    "email": "alice@example.com",
+    "created_at": "2020-09-02T22:25:57.282Z",
+    "updated_at": "2020-09-02T22:25:57.282Z",
+    "authentication_token": "Gp7NKBd8-wgXqazx-cuk"
+}
+```
+
+### User sign in
+
+#### Path
+
+`POST /users/sign_in`
+
+#### Send
+
+```json
+{
+    "user": {
+        "email": "alice@example.com",
+        "password": "foobar"
+    }
+}
+```
+
+#### Receive
+
+```json
+{
+    "id": 1,
+    "email": "alice@example.com",
+    "created_at": "2020-09-02T22:28:19.210Z",
+    "updated_at": "2020-09-02T22:28:19.210Z",
+    "authentication_token": "1QMU_xuspnHL3uMvVyyq"
+}
+```
