@@ -19,7 +19,7 @@ An alternative method is passing them in as query parameters.
 https://secure.example.com?user_email=alice@example.com&user_token=1G8_s7P-V-4MGojaKD7a
 ```
 
-You can even mix and match these methods (if you really wanted to).
+You can even mix and match these methods if you really wanted to (please don't).
 
 ## API Endpoints
 
