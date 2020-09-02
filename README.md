@@ -81,3 +81,17 @@ You can even mix and match these methods (if you really wanted to).
     "authentication_token": "1QMU_xuspnHL3uMvVyyq"
 }
 ```
+
+### User sign out
+
+#### Path
+
+`DELETE /users/sign_out`
+
+#### Send
+
+This request does not have a body.
+
+#### Receive
+
+`200 OK`
