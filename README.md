@@ -95,3 +95,19 @@ This request does not have a body.
 #### Receive
 
 `200 OK`
+
+### Retrieve module JSON
+
+#### Path
+
+`GET /modules/:the_module_name`
+
+Example: `GET /modules/passwords`
+
+#### Send
+
+This request does not have a body.
+
+#### Receive
+
+The module data as a JSON dictionary.
