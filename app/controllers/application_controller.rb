@@ -12,7 +12,7 @@ class ApplicationController < ActionController::API
   end
 
   def add_headers
-    headers['Access-Control-Allow-Origin'] = '*'
+    headers['Access-Control-Allow-Origin'] = 'http://localhost:3000'
     headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, PATCH, DELETE, OPTIONS, HEAD'
     headers['Access-Control-Request-Method'] = '*'
     headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
