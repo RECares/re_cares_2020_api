@@ -39,7 +39,7 @@ class SiteModulesController < ApplicationController
   # end
 
   def passwords
-    render json: File.read('data/site_modules/passwords.json')
+    render json: File.read('data/site_modules/test.json')
   end
 
   private
