@@ -1,0 +1,2 @@
+class SiteModule < ApplicationRecord
+end
