@@ -100,7 +100,7 @@ This request does not have a body.
 
 #### Path
 
-`GET /modules/:the_module_name`
+`GET /site_modules/:the_module_name`
 
 Example: `GET /modules/passwords`
 
@@ -111,3 +111,26 @@ This request does not have a body.
 #### Receive
 
 The module data as a JSON dictionary.
+
+### Retrive metadata on all modules
+
+#### Path
+
+`GEt /site_modules`
+
+### Send
+
+This request does not have a body.
+
+#### Receive
+
+```json
+[
+    {
+        "id": 1,
+        "name": "Passwords",
+        "created_at": "2020-09-04T00:48:09.372Z",
+        "updated_at": "2020-09-04T00:48:09.372Z"
+    }
+]
+```
